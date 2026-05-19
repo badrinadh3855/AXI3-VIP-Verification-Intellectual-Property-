@@ -1,0 +1,205 @@
+# vsim -cvgperinstance -vopt -voptargs="+acc" -coverage -sva -c -do " log -r /* ;coverage save -onexit mem_cov1;run -all; exit" -wlf wave_file1.wlf -l test1.log -sv_seed random work.top "+UVM_TESTNAME=test" 
+# Start time: 19:55:34 on Jan 18,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_interconnect(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2022.1_2 linux_x86_64 Apr  2 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.axi_mif(fast)
+# Loading work.axi_sif(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.axi_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.axi_mif(fast__2)
+# Loading work.axi_sif(fast__2)
+# Loading work.axi_interconnect_wrap_4x4(fast)
+# Loading work.axi_interconnect(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading /home/cad/eda/Mentor_Graphics/Questasim/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# Sv_Seed = 3715125858
+#  log -r /* 
+# coverage save -onexit mem_cov1
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# Addressing configuration for axi_interconnect instance top.DUV.axi_interconnect_inst
+#  0 ( 0): 00000000 / 24 -- 00000000-00ffffff
+#  1 ( 0): 01000000 / 24 -- 01000000-01ffffff
+#  2 ( 0): 02000000 / 24 -- 02000000-02ffffff
+#  3 ( 0): 03000000 / 24 -- 03000000-03ffffff
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------
+# Name                         Type                    Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top                 test                    -     @491 
+#   envh                       environment             -     @534 
+#     magt_top                 master_agent_top        -     @542 
+#       magt[0]                master_agent            -     @670 
+#         mdrvh                master_driver           -     @710 
+#           rsp_port           uvm_analysis_port       -     @725 
+#           seq_item_port      uvm_seq_item_pull_port  -     @717 
+#         mmonh                master_monitor          -     @703 
+#         mseqrh               master_sequencer        -     @733 
+#           rsp_export         uvm_analysis_export     -     @740 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @834 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#       magt[1]                master_agent            -     @678 
+#         mdrvh                master_driver           -     @858 
+#           rsp_port           uvm_analysis_port       -     @873 
+#           seq_item_port      uvm_seq_item_pull_port  -     @865 
+#         mmonh                master_monitor          -     @851 
+#         mseqrh               master_sequencer        -     @881 
+#           rsp_export         uvm_analysis_export     -     @888 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @982 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#       magt[2]                master_agent            -     @686 
+#         mdrvh                master_driver           -     @1006
+#           rsp_port           uvm_analysis_port       -     @1021
+#           seq_item_port      uvm_seq_item_pull_port  -     @1013
+#         mmonh                master_monitor          -     @999 
+#         mseqrh               master_sequencer        -     @1029
+#           rsp_export         uvm_analysis_export     -     @1036
+#           seq_item_export    uvm_seq_item_pull_imp   -     @1130
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#       magt[3]                master_agent            -     @694 
+#         mdrvh                master_driver           -     @1154
+#           rsp_port           uvm_analysis_port       -     @1169
+#           seq_item_port      uvm_seq_item_pull_port  -     @1161
+#         mmonh                master_monitor          -     @1147
+#         mseqrh               master_sequencer        -     @1177
+#           rsp_export         uvm_analysis_export     -     @1184
+#           seq_item_export    uvm_seq_item_pull_imp   -     @1278
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#     req                      virtual_sequencer       -     @556 
+#       rsp_export             uvm_analysis_export     -     @563 
+#       seq_item_export        uvm_seq_item_pull_imp   -     @657 
+#       arbitration_queue      array                   0     -    
+#       lock_queue             array                   0     -    
+#       num_last_reqs          integral                32    'd1  
+#       num_last_rsps          integral                32    'd1  
+#     sagt_top                 slave_agent_top         -     @549 
+#       sagt[0]                slave_agent             -     @1303
+#         sdrvh                slave_driver            -     @1343
+#           rsp_port           uvm_analysis_port       -     @1358
+#           seq_item_port      uvm_seq_item_pull_port  -     @1350
+#         smonh                slave_monitor           -     @1336
+#         sseqrh               slave_sequencer         -     @1366
+#           rsp_export         uvm_analysis_export     -     @1373
+#           seq_item_export    uvm_seq_item_pull_imp   -     @1467
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#       sagt[1]                slave_agent             -     @1311
+#         sdrvh                slave_driver            -     @1491
+#           rsp_port           uvm_analysis_port       -     @1506
+#           seq_item_port      uvm_seq_item_pull_port  -     @1498
+#         smonh                slave_monitor           -     @1484
+#         sseqrh               slave_sequencer         -     @1514
+#           rsp_export         uvm_analysis_export     -     @1521
+#           seq_item_export    uvm_seq_item_pull_imp   -     @1615
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#       sagt[2]                slave_agent             -     @1319
+#         sdrvh                slave_driver            -     @1639
+#           rsp_port           uvm_analysis_port       -     @1654
+#           seq_item_port      uvm_seq_item_pull_port  -     @1646
+#         smonh                slave_monitor           -     @1632
+#         sseqrh               slave_sequencer         -     @1662
+#           rsp_export         uvm_analysis_export     -     @1669
+#           seq_item_export    uvm_seq_item_pull_imp   -     @1763
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#       sagt[3]                slave_agent             -     @1327
+#         sdrvh                slave_driver            -     @1787
+#           rsp_port           uvm_analysis_port       -     @1802
+#           seq_item_port      uvm_seq_item_pull_port  -     @1794
+#         smonh                slave_monitor           -     @1780
+#         sseqrh               slave_sequencer         -     @1810
+#           rsp_export         uvm_analysis_export     -     @1817
+#           seq_item_export    uvm_seq_item_pull_imp   -     @1911
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+# ----------------------------------------------------------------
+# 
+# start of read_awaddr
+# start of slave_addr
+# start of read_awaddr
+# start of slave_addr
+# start of read_awaddr
+# start of slave_addr
+# start of read_awaddr
+# start of slave_addr
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    4
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [UVMTOP]     1
+# ** Note: $finish    : /home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 0 ps  Iteration: 216  Instance: /top
+# Saving coverage database on exit...
+# End time: 19:55:38 on Jan 18,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2
